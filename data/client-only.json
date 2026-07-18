@@ -1,0 +1,3774 @@
+{
+  "schemaVersion": 1,
+  "listVersion": "2026.07.19",
+  "updatedAt": "2026-07-19T00:00:00Z",
+  "source": {
+    "repository": "https://github.com/LianJordaan/client-side-mods-list",
+    "path": "data/client-only.json",
+    "branch": "main"
+  },
+  "matching": {
+    "precedence": [
+      "modrinth.projectId",
+      "curseforge.projectId",
+      "modrinth.slug",
+      "curseforge.slug",
+      "filename.equals",
+      "filename.prefix",
+      "filename.regex"
+    ],
+    "filenameCaseSensitive": false,
+    "confidenceTiers": [
+      "verified",
+      "high",
+      "heuristic"
+    ],
+    "sidenessValues": [
+      "client-only",
+      "client-optional"
+    ]
+  },
+  "neverRemove": [
+    {
+      "id": "protect.fabric-api",
+      "name": "Fabric API",
+      "match": {
+        "modrinth": {
+          "projectId": "P7dR8mSH",
+          "slug": "fabric-api"
+        },
+        "filename": {
+          "prefix": [
+            "fabric-api-"
+          ]
+        }
+      },
+      "notes": "The Fabric mod loader's standard library. Removing it fails every Fabric mod."
+    },
+    {
+      "id": "protect.fabric-language-kotlin",
+      "name": "Fabric Language Kotlin",
+      "match": {
+        "modrinth": {
+          "projectId": "Ha28R6CL",
+          "slug": "fabric-language-kotlin"
+        },
+        "filename": {
+          "prefix": [
+            "fabric-language-kotlin-"
+          ]
+        }
+      },
+      "notes": "Kotlin runtime for Fabric mods. Declared optional/optional upstream, but any Kotlin mod left behind will fail to load without it."
+    },
+    {
+      "id": "protect.architectury-api",
+      "name": "Architectury API",
+      "match": {
+        "modrinth": {
+          "projectId": "lhGA9TYQ",
+          "slug": "architectury-api"
+        },
+        "filename": {
+          "prefix": [
+            "architectury-"
+          ]
+        }
+      },
+      "notes": "Cross-loader abstraction layer; declared required on both sides. REI and many others hard-depend on it."
+    },
+    {
+      "id": "protect.cloth-config",
+      "name": "Cloth Config API",
+      "match": {
+        "modrinth": {
+          "projectId": "9s6osm5g",
+          "slug": "cloth-config"
+        },
+        "filename": {
+          "prefix": [
+            "cloth-config-",
+            "clothconfig"
+          ]
+        }
+      },
+      "notes": "Config library. Filenames appear as both cloth-config-*.jar and ClothConfig*.jar, hence two prefixes."
+    },
+    {
+      "id": "protect.kotlin-for-forge",
+      "name": "Kotlin for Forge",
+      "match": {
+        "modrinth": {
+          "projectId": "ordsPcFz",
+          "slug": "kotlin-for-forge"
+        },
+        "filename": {
+          "prefix": [
+            "kotlinforforge-"
+          ]
+        }
+      },
+      "notes": "Kotlin runtime for Forge/NeoForge. Filenames are kotlinforforge-6.3.0-all.jar."
+    },
+    {
+      "id": "protect.forge-config-api-port",
+      "name": "Forge Config API Port",
+      "match": {
+        "modrinth": {
+          "projectId": "ohNO6lps",
+          "slug": "forge-config-api-port"
+        },
+        "filename": {
+          "prefix": [
+            "forgeconfigapiport-"
+          ]
+        }
+      },
+      "notes": "Ports Forge's config system to other loaders. Filenames are ForgeConfigAPIPort-v26.2.1-mc26.2.x-Fabric.jar; matching is case-insensitive."
+    },
+    {
+      "id": "protect.balm",
+      "name": "Balm",
+      "match": {
+        "modrinth": {
+          "projectId": "MBAkmtvl",
+          "slug": "balm"
+        },
+        "filename": {
+          "prefix": [
+            "balm-"
+          ]
+        }
+      },
+      "notes": "Blay's cross-loader abstraction layer (Waystones, Cooking for Blockheads, ...)."
+    },
+    {
+      "id": "protect.bookshelf-lib",
+      "name": "Bookshelf",
+      "match": {
+        "modrinth": {
+          "projectId": "uy4Cnpcm",
+          "slug": "bookshelf-lib"
+        },
+        "filename": {
+          "prefix": [
+            "bookshelf-"
+          ]
+        }
+      },
+      "notes": "Darkhax's library, declared required on both sides. Note the Modrinth slug is 'bookshelf-lib' — the bare 'bookshelf' slug is an unrelated Paper plugin."
+    },
+    {
+      "id": "protect.collective",
+      "name": "Collective",
+      "match": {
+        "modrinth": {
+          "projectId": "e0M1UDsY",
+          "slug": "collective"
+        },
+        "filename": {
+          "prefix": [
+            "collective-"
+          ]
+        }
+      },
+      "notes": "Serilum's shared library; every Serilum mod hard-depends on it."
+    },
+    {
+      "id": "protect.puzzles-lib",
+      "name": "Puzzles Lib",
+      "match": {
+        "modrinth": {
+          "projectId": "QAGBst4M",
+          "slug": "puzzles-lib"
+        },
+        "filename": {
+          "prefix": [
+            "puzzleslib-"
+          ]
+        }
+      },
+      "notes": "Fuzs' library. Filenames are PuzzlesLib-v26.1.12-mc26.1.x-Fabric.jar."
+    },
+    {
+      "id": "protect.resourceful-lib",
+      "name": "Resourceful Lib",
+      "match": {
+        "modrinth": {
+          "projectId": "G1hIVOrD",
+          "slug": "resourceful-lib"
+        },
+        "filename": {
+          "prefix": [
+            "resourcefullib-"
+          ]
+        }
+      },
+      "notes": "Team Resourceful's library, declared required on both sides."
+    },
+    {
+      "id": "protect.framework",
+      "name": "Framework",
+      "match": {
+        "modrinth": {
+          "slug": "framework"
+        },
+        "curseforge": {
+          "slug": "framework"
+        },
+        "filename": {
+          "prefix": [
+            "framework-"
+          ]
+        }
+      },
+      "notes": "MrCrayfish's library mod. No Modrinth project exists, so this is slug- and filename-matched only. The bare 'framework-' prefix is broad, which is acceptable here: over-matching in neverRemove only protects extra files."
+    },
+    {
+      "id": "protect.mixinextras",
+      "name": "MixinExtras",
+      "match": {
+        "modrinth": {
+          "slug": "mixinextras"
+        },
+        "filename": {
+          "prefix": [
+            "mixinextras-"
+          ]
+        }
+      },
+      "notes": "Usually jar-in-jar'd, but sometimes shipped loose. No Modrinth project, so this is filename-matched only. Removing it breaks every mod using its mixin syntax."
+    },
+    {
+      "id": "protect.connector",
+      "name": "Sinytra Connector",
+      "match": {
+        "modrinth": {
+          "projectId": "u58R1TMW",
+          "slug": "connector"
+        },
+        "filename": {
+          "prefix": [
+            "connector-"
+          ]
+        }
+      },
+      "notes": "Runs Fabric mods on NeoForge. Filenames appear as both connector-*.jar and Connector-*.jar; matching is case-insensitive."
+    },
+    {
+      "id": "protect.forgified-fabric-api",
+      "name": "Forgified Fabric API",
+      "match": {
+        "modrinth": {
+          "projectId": "Aqlf1Shp",
+          "slug": "forgified-fabric-api"
+        },
+        "filename": {
+          "prefix": [
+            "forgified-fabric-api-"
+          ]
+        }
+      },
+      "notes": "The Fabric API implementation Connector depends on. Declared required on both sides."
+    }
+  ],
+  "rules": [
+    {
+      "id": "mr.sodium",
+      "name": "Sodium",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "AANobbMI",
+          "slug": "sodium"
+        },
+        "filename": {
+          "prefix": [
+            "sodium-fabric-",
+            "sodium-neoforge-",
+            "sodium-forge-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/sodium -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: sodium-fabric-0.9.1+mc26.1.2.jar, sodium-neoforge-0.9.1+mc26.2.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Rendering engine replacement. No server-side code path at all."
+    },
+    {
+      "id": "mr.iris",
+      "name": "Iris Shaders",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "YL57xq9U",
+          "slug": "iris"
+        },
+        "filename": {
+          "prefix": [
+            "iris-fabric-",
+            "iris-neoforge-",
+            "iris-mc"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/iris -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: iris-fabric-1.11.2+mc26.1.2.jar, iris-neoforge-1.11.2+mc26.2.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Shader loader. Shaderpacks live in shaderpacks/, which the cleaner does not scan."
+    },
+    {
+      "id": "mr.indium",
+      "name": "Indium",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "Orvt0mRa",
+          "slug": "indium"
+        },
+        "filename": {
+          "prefix": [
+            "indium-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/indium -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: indium-1.0.36+mc1.20.1.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Sodium addon providing the Fabric Rendering API. Useless without Sodium."
+    },
+    {
+      "id": "mr.embeddium",
+      "name": "Embeddium",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "sk9rgfiA",
+          "slug": "embeddium"
+        },
+        "filename": {
+          "prefix": [
+            "embeddium-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/embeddium -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Forge/NeoForge-side port of Sodium; Modrinth also tags fabric, so the loader list is kept wide rather than assuming forge-only.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Sodium port for Forge/NeoForge."
+    },
+    {
+      "id": "mr.oculus",
+      "name": "Oculus",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "GchcoXML",
+          "slug": "oculus"
+        },
+        "filename": {
+          "prefix": [
+            "oculus-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/oculus -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: oculus-mc1.20.1-1.8.0.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Iris port for Forge. Pairs with Rubidium/Embeddium."
+    },
+    {
+      "id": "mr.rubidium",
+      "name": "Rubidium",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "4ZqxOvjD",
+          "slug": "rubidium"
+        },
+        "filename": {
+          "prefix": [
+            "rubidium-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/rubidium -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: rubidium-mc1.20.1-0.7.1.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Predecessor of Embeddium; Sodium port for Forge."
+    },
+    {
+      "id": "mr.canvas",
+      "name": "Canvas Renderer",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "VOYxIjFI",
+          "slug": "canvas"
+        },
+        "filename": {
+          "prefix": [
+            "canvas-fabric-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/canvas -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: canvas-fabric-20.2.2641.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Alternative rendering engine."
+    },
+    {
+      "id": "mr.enhanced-block-entities",
+      "name": "Enhanced Block Entities",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "OVuFYfre",
+          "slug": "ebe"
+        },
+        "filename": {
+          "prefix": [
+            "enhancedblockentities-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/ebe -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: enhancedblockentities-0.11.3+1.21.4.jar",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Separate NeoForge/Forge ports exist as distinct Modrinth projects (HlLmiJmt, wxtGAtU7); the filename prefix covers all three.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Block entity rendering optimisation."
+    },
+    {
+      "id": "mr.entityculling",
+      "name": "Entity Culling",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "NNAgCjsB",
+          "slug": "entityculling"
+        },
+        "filename": {
+          "prefix": [
+            "entityculling-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/entityculling -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"* (absent, defaults to both)\" (mod id entityculling)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "fabric.mod.json omits `environment`, but the author declares server_side=unsupported and the mod only skips client-side rendering.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Skips rendering of entities hidden behind blocks. Purely a render-path change."
+    },
+    {
+      "id": "mr.immediatelyfast",
+      "name": "ImmediatelyFast",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "fabric.mod.json environment=client",
+      "match": {
+        "modrinth": {
+          "projectId": "5ZwdcRci",
+          "slug": "immediatelyfast"
+        },
+        "filename": {
+          "prefix": [
+            "immediatelyfast-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/immediatelyfast -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"client\" (mod id immediatelyfast)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: ImmediatelyFast-Fabric-1.16.2+26.2.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Two independent signals agree: declared client environment and unsupported server side."
+    },
+    {
+      "id": "mr.sodium-extra",
+      "name": "Sodium Extra",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "PtjYWJkn",
+          "slug": "sodium-extra"
+        },
+        "filename": {
+          "prefix": [
+            "sodium-extra-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/sodium-extra -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: sodium-extra-fabric-0.9.3+mc26.2.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Sodium options addon."
+    },
+    {
+      "id": "mr.reeses-sodium-options",
+      "name": "Reese's Sodium Options",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "Bh37bMuy",
+          "slug": "reeses-sodium-options"
+        },
+        "filename": {
+          "prefix": [
+            "reeses-sodium-options-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/reeses-sodium-options -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: reeses-sodium-options-fabric-2.2.3+mc26.2.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Replacement video settings screen for Sodium."
+    },
+    {
+      "id": "mr.continuity",
+      "name": "Continuity",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "fabric.mod.json environment=client",
+      "match": {
+        "modrinth": {
+          "projectId": "1IjD5062",
+          "slug": "continuity"
+        },
+        "filename": {
+          "prefix": [
+            "continuity-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/continuity -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"client\" (mod id continuity)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: continuity-3.0.1+26.2.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Connected textures. Resource-pack driven, no server component."
+    },
+    {
+      "id": "mr.moreculling",
+      "name": "More Culling",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "51shyZVL",
+          "slug": "moreculling"
+        },
+        "filename": {
+          "prefix": [
+            "moreculling-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/moreculling -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Additional face-culling in the render path."
+    },
+    {
+      "id": "mr.cull-less-leaves",
+      "name": "Cull Less Leaves",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "iG6ZHsUV",
+          "slug": "cull-less-leaves"
+        },
+        "filename": {
+          "prefix": [
+            "cullleaves-",
+            "cull-less-leaves-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/cull-less-leaves -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Leaf-block render culling."
+    },
+    {
+      "id": "mr.dynamic-fps",
+      "name": "Dynamic FPS",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "LQ3K71Q1",
+          "slug": "dynamic-fps"
+        },
+        "filename": {
+          "prefix": [
+            "dynamic-fps-",
+            "dynamicfps-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/dynamic-fps -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Reduces framerate when the game window loses focus. Meaningless headless."
+    },
+    {
+      "id": "mr.sodium-shadowy-path-blocks",
+      "name": "Sodium Shadowy Path Blocks",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "EIa1eiMm",
+          "slug": "sodium-shadowy-path-blocks"
+        },
+        "filename": {
+          "prefix": [
+            "sodiumshadowypathblocks-",
+            "sspb-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/sodium-shadowy-path-blocks -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Restores vanilla path-block shading under Sodium."
+    },
+    {
+      "id": "mr.borderless-mining",
+      "name": "Borderless Mining",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "kYq5qkSL",
+          "slug": "borderless-mining"
+        },
+        "filename": {
+          "prefix": [
+            "borderless-mining-",
+            "borderlessmining-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/borderless-mining -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Changes the OS window mode. Nothing to do on a server."
+    },
+    {
+      "id": "mr.lambdynamiclights",
+      "name": "LambDynamicLights",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "yBW8D80W",
+          "slug": "lambdynamiclights"
+        },
+        "filename": {
+          "prefix": [
+            "lambdynamiclights-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/lambdynamiclights -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Purely a client-side lightmap effect; it does not write light data to the world.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Dynamic lighting is a client render effect and is not persisted."
+    },
+    {
+      "id": "mr.animatica",
+      "name": "Animatica",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "PRN43VSY",
+          "slug": "animatica"
+        },
+        "filename": {
+          "prefix": [
+            "animatica-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/animatica -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Implements OptiFine animated textures. Resource-pack feature."
+    },
+    {
+      "id": "mr.colormatic",
+      "name": "Colormatic",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "V4IQxkZC",
+          "slug": "colormatic"
+        },
+        "filename": {
+          "prefix": [
+            "colormatic-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/colormatic -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Custom colours from resource packs."
+    },
+    {
+      "id": "mr.cit-resewn",
+      "name": "CIT Resewn",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "otVJckYQ",
+          "slug": "cit-resewn"
+        },
+        "filename": {
+          "prefix": [
+            "citresewn-",
+            "cit-resewn-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/cit-resewn -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Implements OptiFine CIT (custom item textures)."
+    },
+    {
+      "id": "mr.entitytexturefeatures",
+      "name": "Entity Texture Features (ETF)",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "BVzZfTc1",
+          "slug": "entitytexturefeatures"
+        },
+        "filename": {
+          "prefix": [
+            "entity_texture_features_",
+            "entitytexturefeatures-",
+            "etf-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/entitytexturefeatures -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "OptiFine random/emissive entity textures."
+    },
+    {
+      "id": "mr.entity-model-features",
+      "name": "Entity Model Features (EMF)",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "4I1XuqiY",
+          "slug": "entity-model-features"
+        },
+        "filename": {
+          "prefix": [
+            "entity_model_features_",
+            "entity_model_features-",
+            "entitymodelfeatures-",
+            "emf-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/entity-model-features -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "OptiFine custom entity models."
+    },
+    {
+      "id": "mr.cem",
+      "name": "Custom Entity Models (CEM)",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "YOQCucah",
+          "slug": "cem"
+        },
+        "filename": {
+          "prefix": [
+            "cem-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/cem -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "OptiFine CEM implementation."
+    },
+    {
+      "id": "mr.visuality",
+      "name": "Visuality",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "rI0hvYcd",
+          "slug": "visuality"
+        },
+        "filename": {
+          "prefix": [
+            "visuality-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/visuality -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Extra particle effects, spawned client-side only."
+    },
+    {
+      "id": "mr.fallingleaves",
+      "name": "Falling Leaves",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "WhbRG4iK",
+          "slug": "fallingleaves"
+        },
+        "filename": {
+          "prefix": [
+            "fallingleaves-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/fallingleaves -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Decorative leaf particles."
+    },
+    {
+      "id": "mr.particle-rain",
+      "name": "Particle Rain",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "nrikgvxm",
+          "slug": "particle-rain"
+        },
+        "filename": {
+          "prefix": [
+            "particle-rain-",
+            "particlerain-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/particle-rain -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Replaces weather rendering with particles."
+    },
+    {
+      "id": "mr.better-clouds",
+      "name": "Better Clouds",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "5srFLIaK",
+          "slug": "better-clouds"
+        },
+        "filename": {
+          "prefix": [
+            "better-clouds-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/better-clouds -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: better-clouds-1.14.1+26.2-fabric.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Cloud rendering replacement."
+    },
+    {
+      "id": "mr.3dskinlayers",
+      "name": "3D Skin Layers",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "zV5r3pPn",
+          "slug": "3dskinlayers"
+        },
+        "filename": {
+          "prefix": [
+            "3dskinlayers-",
+            "skinlayers3d-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/3dskinlayers -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Renders the player skin's second layer in 3D."
+    },
+    {
+      "id": "mr.capes",
+      "name": "Capes",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "89Wsn8GD",
+          "slug": "capes"
+        },
+        "filename": {
+          "prefix": [
+            "capes-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/capes -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Fetches capes from third-party services for local rendering."
+    },
+    {
+      "id": "mr.chat-heads",
+      "name": "Chat Heads",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "Wb5oqrBJ",
+          "slug": "chat-heads"
+        },
+        "filename": {
+          "prefix": [
+            "chat_heads-",
+            "chatheads-",
+            "chat-heads-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/chat-heads -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "An optional server-side companion exists for name resolution on some platforms, but the mod jar itself is client-render only.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Draws player heads next to chat messages."
+    },
+    {
+      "id": "mr.not-enough-animations",
+      "name": "Not Enough Animations",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "MPCX6s5C",
+          "slug": "not-enough-animations"
+        },
+        "filename": {
+          "prefix": [
+            "notenoughanimations-",
+            "not-enough-animations-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/not-enough-animations -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Third-person animation polish, rendered locally."
+    },
+    {
+      "id": "mr.first-person-model",
+      "name": "First-person Model",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "H5XMjpHi",
+          "slug": "first-person-model"
+        },
+        "filename": {
+          "prefix": [
+            "firstperson-",
+            "first-person-model-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/first-person-model -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Renders your own body in first person."
+    },
+    {
+      "id": "mr.shoulder-surfing-reloaded",
+      "name": "Shoulder Surfing Reloaded",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "kepjj2sy",
+          "slug": "shoulder-surfing-reloaded"
+        },
+        "filename": {
+          "prefix": [
+            "shouldersurfing-",
+            "shoulder-surfing-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/shoulder-surfing-reloaded -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Third-person camera replacement."
+    },
+    {
+      "id": "mr.boat-item-view",
+      "name": "Boat Item View",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "BdKIyOLe",
+          "slug": "boat-item-view"
+        },
+        "filename": {
+          "prefix": [
+            "boatitemview-",
+            "boat-item-view-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/boat-item-view -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Hides the held item while in a boat."
+    },
+    {
+      "id": "mr.mouse-tweaks",
+      "name": "Mouse Tweaks",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "aC3cM3Vq",
+          "slug": "mouse-tweaks"
+        },
+        "filename": {
+          "prefix": [
+            "mousetweaks-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/mouse-tweaks -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: MouseTweaks-fabric-mc26.2-2.31.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Sends ordinary container clicks; the server sees nothing unusual."
+    },
+    {
+      "id": "mr.inventory-profiles-next",
+      "name": "Inventory Profiles Next",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "O7RBXm3n",
+          "slug": "inventory-profiles-next"
+        },
+        "filename": {
+          "prefix": [
+            "inventoryprofilesnext-",
+            "inventory-profiles-next-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/inventory-profiles-next -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: InventoryProfilesNext-forge-26.2-2.3.5.jar",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Depends on libIPN, which is also client-only and is listed separately.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Automates inventory sorting using vanilla click packets."
+    },
+    {
+      "id": "mr.controlling",
+      "name": "Controlling",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "xv94TkTM",
+          "slug": "controlling"
+        },
+        "filename": {
+          "prefix": [
+            "controlling-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/controlling -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Adds search to the keybind screen."
+    },
+    {
+      "id": "mr.modmenu",
+      "name": "Mod Menu",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "mOgUt4GM",
+          "slug": "modmenu"
+        },
+        "filename": {
+          "prefix": [
+            "modmenu-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/modmenu -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Frequently declared as a dependency by client mods. Because it is stripped together with its dependents this is safe, but it is a common source of 'missing dependency' reports when a pack is stripped inconsistently.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Adds the mods screen to the title menu."
+    },
+    {
+      "id": "mr.betterf3",
+      "name": "BetterF3",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "8shC1gFX",
+          "slug": "betterf3"
+        },
+        "filename": {
+          "prefix": [
+            "betterf3-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/betterf3 -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Distinct from the Forge-only project 'Better F3' (V8TerSIX); both are client-only, but only this id is matched here.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Reskins the F3 debug overlay."
+    },
+    {
+      "id": "mr.zoomify",
+      "name": "Zoomify",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "w7ThoJFB",
+          "slug": "zoomify"
+        },
+        "filename": {
+          "prefix": [
+            "zoomify-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/zoomify -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Camera zoom keybind."
+    },
+    {
+      "id": "mr.ok-zoomer",
+      "name": "Ok Zoomer",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "aXf2OSFU",
+          "slug": "ok-zoomer"
+        },
+        "filename": {
+          "prefix": [
+            "okzoomer-",
+            "ok-zoomer-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/ok-zoomer -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Camera zoom keybind."
+    },
+    {
+      "id": "mr.logical-zoom",
+      "name": "Logical Zoom",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "8bOImuGU",
+          "slug": "logical-zoom"
+        },
+        "filename": {
+          "prefix": [
+            "logical_zoom-",
+            "logical-zoom-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/logical-zoom -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Camera zoom keybind."
+    },
+    {
+      "id": "mr.wi-zoom",
+      "name": "WI Zoom",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "o7DitHWP",
+          "slug": "wi-zoom"
+        },
+        "filename": {
+          "prefix": [
+            "wi-zoom-",
+            "wizoom-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/wi-zoom -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Camera zoom keybind."
+    },
+    {
+      "id": "mr.amecs",
+      "name": "Amecs",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "rcLriA4v",
+          "slug": "amecs"
+        },
+        "filename": {
+          "prefix": [
+            "amecs-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/amecs -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Keybind modifier support."
+    },
+    {
+      "id": "mr.raised",
+      "name": "Raised",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "nCQRBEiR",
+          "slug": "raised"
+        },
+        "filename": {
+          "prefix": [
+            "raised-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/raised -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Shifts the hotbar rendering position."
+    },
+    {
+      "id": "mr.detail-armor-bar",
+      "name": "Detail Armor Bar",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "hAt6ty93",
+          "slug": "detail-armor-bar"
+        },
+        "filename": {
+          "prefix": [
+            "detailab-",
+            "detail-armor-bar-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/detail-armor-bar -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Redraws the armour HUD from data the client already has."
+    },
+    {
+      "id": "mr.legendary-tooltips",
+      "name": "Legendary Tooltips",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "atHH8NyV",
+          "slug": "legendary-tooltips"
+        },
+        "filename": {
+          "prefix": [
+            "legendarytooltips-",
+            "legendary-tooltips-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/legendary-tooltips -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Depends on Iceberg, which declares server_side=required and is listed separately as client-optional. Strip this without stripping Iceberg.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Tooltip restyling."
+    },
+    {
+      "id": "mr.better-advancements",
+      "name": "Better Advancements",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "Q2OqKxDG",
+          "slug": "better-advancements"
+        },
+        "filename": {
+          "prefix": [
+            "betteradvancements-",
+            "better-advancements-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/better-advancements -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Replacement advancement screen. Advancement data still comes from the server."
+    },
+    {
+      "id": "mr.better-mount-hud",
+      "name": "Better Mount HUD",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "kqJFAPU9",
+          "slug": "better-mount-hud"
+        },
+        "filename": {
+          "prefix": [
+            "bettermounthud-",
+            "better-mount-hud-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/better-mount-hud -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Mount health/jump HUD rendering."
+    },
+    {
+      "id": "mr.light-overlay",
+      "name": "Light Overlay",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "YfOlc91N",
+          "slug": "light-overlay"
+        },
+        "filename": {
+          "prefix": [
+            "light-overlay-",
+            "lightoverlay-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/light-overlay -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Draws spawn-safety markers from client-side light data."
+    },
+    {
+      "id": "mr.freecam",
+      "name": "Freecam",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "XeEZ3fK2",
+          "slug": "freecam"
+        },
+        "filename": {
+          "prefix": [
+            "freecam-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/freecam -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Detached camera. Client-side only, and usually unwanted on a server anyway."
+    },
+    {
+      "id": "mr.craftpresence",
+      "name": "CraftPresence",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "DFqQfIBR",
+          "slug": "craftpresence"
+        },
+        "filename": {
+          "prefix": [
+            "craftpresence-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/craftpresence -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Discord Rich Presence integration."
+    },
+    {
+      "id": "mr.screenshot-to-clipboard",
+      "name": "Screenshot to Clipboard",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "1KiJRrTg",
+          "slug": "screenshot-to-clipboard"
+        },
+        "filename": {
+          "prefix": [
+            "screenshot-to-clipboard-",
+            "screenshottoclipboard-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/screenshot-to-clipboard -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Copies screenshots to the OS clipboard."
+    },
+    {
+      "id": "mr.auth-me",
+      "name": "Auth Me",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "yjgIrBjZ",
+          "slug": "auth-me"
+        },
+        "filename": {
+          "prefix": [
+            "auth-me-",
+            "authme-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/auth-me -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Unrelated to server-side login plugins such as AuthMe Reloaded, which are server-required. Matched by project id to avoid that collision.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Re-authenticates the client's Mojang session in-game."
+    },
+    {
+      "id": "mr.ambientsounds",
+      "name": "AmbientSounds",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "fM515JnW",
+          "slug": "ambientsounds"
+        },
+        "filename": {
+          "prefix": [
+            "ambientsounds_",
+            "ambientsounds-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/ambientsounds -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Depends on CreativeCore, which is dual-sided and must not be stripped with it.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Ambient sound loops generated locally."
+    },
+    {
+      "id": "mr.presence-footsteps",
+      "name": "Presence Footsteps",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "rcTfTZr3",
+          "slug": "presence-footsteps"
+        },
+        "filename": {
+          "prefix": [
+            "presencefootsteps-",
+            "presence-footsteps-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/presence-footsteps -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Replaces footstep sounds client-side."
+    },
+    {
+      "id": "mr.sound-physics-remastered",
+      "name": "Sound Physics Remastered",
+      "sideness": "client-only",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Client-side audio processing (DSP)",
+      "match": {
+        "modrinth": {
+          "projectId": "qyVF9oeo",
+          "slug": "sound-physics-remastered"
+        },
+        "filename": {
+          "prefix": [
+            "soundphysics-",
+            "sound-physics-remastered-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/sound-physics-remastered -> client_side=required, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"*\" (mod id sound_physics_remastered)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Author declares server_side=optional and the jar loads on both sides, so this is not marked verified. All reverb/occlusion processing happens in the client audio pipeline; removing the jar from a server does not change gameplay.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Downgraded to 'high' because the author does not declare the server side unsupported. Still auto-selectable, but the residual risk is recorded here."
+    },
+    {
+      "id": "mr.xaeros-minimap",
+      "name": "Xaero's Minimap",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Client-rendered minimap; server side is optional extras only",
+      "match": {
+        "modrinth": {
+          "projectId": "1bokaNcj",
+          "slug": "xaeros-minimap"
+        },
+        "filename": {
+          "prefix": [
+            "xaerominimap-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/xaeros-minimap -> client_side=required, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"*\" (mod id xaerominimap)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: xaerominimap-fabric-26.2-26.4.2.jar",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "server_side=optional covers fair-play/waypoint-sharing integrations. The jar is inert on a dedicated server that does not use them, so this stays client-only, but at 'high' rather than 'verified'.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "The Xaero server-side jar enforces fair-play restrictions (cave mode, entity radar, waypoint sharing) — the same admin control surface that keeps JourneyMap at client-optional. Stripping it silently disables an anti-cheat control an operator installed deliberately."
+    },
+    {
+      "id": "mr.xaeros-world-map",
+      "name": "Xaero's World Map",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Client-rendered world map; server side is optional extras only",
+      "match": {
+        "modrinth": {
+          "projectId": "NcUtCpym",
+          "slug": "xaeros-world-map"
+        },
+        "filename": {
+          "prefix": [
+            "xaeroworldmap-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/xaeros-world-map -> client_side=required, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"*\" (mod id xaeroworldmap)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: xaeroworldmap-fabric-26.2-1.44.2.jar",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Same reasoning as Xaero's Minimap.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Same as Xaero's Minimap: the companion server jar is a deliberate operator control, not dead client weight."
+    },
+    {
+      "id": "mr.voxelmap-updated",
+      "name": "VoxelMap (Updated)",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "wkzK5379",
+          "slug": "voxelmap-updated"
+        },
+        "curseforge": {
+          "slug": "voxelmap"
+        },
+        "filename": {
+          "prefix": [
+            "voxelmap-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/voxelmap-updated -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: voxelmap-fabric-26.2-1.16.8.jar",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Modrinth also tags paper/spigot/purpur loaders on this project, which contradicts server_side=unsupported. Kept at 'high' because of that inconsistency rather than 'verified'.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Modrinth tags paper/spigot/purpur loaders on this project, which contradicts server_side=unsupported — a project publishing Paper artifacts has a server-side half. When sideness is not clear the answer is client-optional, not a guess in the strip direction."
+    },
+    {
+      "id": "mr.journeymap",
+      "name": "JourneyMap",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Ships a real server-side build",
+      "match": {
+        "modrinth": {
+          "projectId": "lfHFW1mp",
+          "slug": "journeymap"
+        },
+        "filename": {
+          "prefix": [
+            "journeymap-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/journeymap -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "a 'journeymap-paper-26.2-6.0.1.jar' build is published, and forge/neoforge server builds provide the JourneyMap Server admin features",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "JourneyMap Server controls what clients may map (cave mapping, radar, death waypoints). Stripping it silently removes an admin control surface.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "NEVER auto-strip. Surface it so an operator can decide."
+    },
+    {
+      "id": "mr.jei",
+      "name": "Just Enough Items (JEI)",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Has server-side recipe transfer and cheat-mode handling",
+      "match": {
+        "modrinth": {
+          "projectId": "u6dRKJwZ",
+          "slug": "jei"
+        },
+        "filename": {
+          "prefix": [
+            "jei-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/jei -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "JEI registers server-bound packets for recipe transfer ('+' button) and cheat mode. Server-side JEI plugins from other mods also register against it. Removing it can break recipe transfer and can fail mod dependency checks.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Very commonly mistaken for client-only. It is not. NEVER auto-strip."
+    },
+    {
+      "id": "mr.rei",
+      "name": "Roughly Enough Items (REI)",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Has server-side recipe transfer and cheat-mode handling",
+      "match": {
+        "modrinth": {
+          "projectId": "nfn13YXA",
+          "slug": "rei"
+        },
+        "filename": {
+          "prefix": [
+            "roughlyenoughitems-",
+            "rei-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/rei -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "A dedicated 'Roughly Enough Items Server Component' (OM4ZYSws) exists with client_side=unsupported/server_side=required, which confirms REI has a real server half. REI also requires Architectury API on both sides.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "NEVER auto-strip. Note REI's own filename is 'RoughlyEnoughItems-'."
+    },
+    {
+      "id": "mr.emi",
+      "name": "EMI",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "fRiHVvU7",
+          "slug": "emi"
+        },
+        "filename": {
+          "prefix": [
+            "emi-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/emi -> client_side=required, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "EMI uses a server-side component for recipe tree/crafting integration and for sync in cheat mode.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "NEVER auto-strip."
+    },
+    {
+      "id": "mr.jade",
+      "name": "Jade",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Server sends the block/entity data Jade displays",
+      "match": {
+        "modrinth": {
+          "projectId": "nvQzSEkH",
+          "slug": "jade"
+        },
+        "filename": {
+          "prefix": [
+            "jade-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/jade -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"* (environment key absent)\" (mod id jade)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Jade requests detailed block-entity and mob data from the server over its own channel. Without the server half, tooltips silently degrade to vanilla data.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "NEVER auto-strip. Also the target of many addon mods that expect it server-side."
+    },
+    {
+      "id": "mr.wthit",
+      "name": "WTHIT",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Server sends the block/entity data WTHIT displays",
+      "match": {
+        "modrinth": {
+          "projectId": "6AQIaxuO",
+          "slug": "wthit"
+        },
+        "filename": {
+          "prefix": [
+            "wthit-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/wthit -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Same architecture as Jade/WAILA: a server component supplies the tooltip data.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "NEVER auto-strip."
+    },
+    {
+      "id": "mr.appleskin",
+      "name": "AppleSkin",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Server syncs saturation and exhaustion values",
+      "match": {
+        "modrinth": {
+          "projectId": "EsAfCjCV",
+          "slug": "appleskin"
+        },
+        "filename": {
+          "prefix": [
+            "appleskin-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/appleskin -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"*\" (mod id appleskin)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Saturation and exhaustion are not sent to vanilla clients. AppleSkin's server half exists specifically to sync them. Strip it and the HUD shows wrong values.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Classic false positive: it looks like a HUD mod, but the data comes from the server."
+    },
+    {
+      "id": "mr.enchantment-descriptions",
+      "name": "Enchantment Descriptions",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "UVtY3ZAC",
+          "slug": "enchantment-descriptions"
+        },
+        "filename": {
+          "prefix": [
+            "enchantmentdescriptions-",
+            "enchdesc-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/enchantment-descriptions -> client_side=required, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Depends on Bookshelf, which is dual-sided and protected by neverRemove.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Tooltip mod, but the author declares server support; not auto-selected."
+    },
+    {
+      "id": "mr.no-chat-reports",
+      "name": "No Chat Reports",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Server side controls chat signing policy",
+      "match": {
+        "modrinth": {
+          "projectId": "qQyHxfxd",
+          "slug": "no-chat-reports"
+        },
+        "filename": {
+          "prefix": [
+            "nochatreports-",
+            "no-chat-reports-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/no-chat-reports -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "On the server it disables chat signature enforcement and advertises safety status to clients. Removing it re-enables reportable chat, which is a policy change an operator may not expect.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "NEVER auto-strip. This one has a real, deliberate server-side effect."
+    },
+    {
+      "id": "mr.lithium",
+      "name": "Lithium",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Server-side tick and AI optimisation",
+      "match": {
+        "modrinth": {
+          "projectId": "gvQqBUqZ",
+          "slug": "lithium"
+        },
+        "filename": {
+          "prefix": [
+            "lithium-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/lithium -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Lithium optimises entity AI, chunk ticking, collision and redstone — almost all of it server-side. Stripping it directly reduces server TPS.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip. Grouped with Sodium in most packs, which is exactly why naive 'performance mod' heuristics get this wrong."
+    },
+    {
+      "id": "mr.starlight",
+      "name": "Starlight",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric"
+      ],
+      "reason": "Replaces the server light engine",
+      "match": {
+        "modrinth": {
+          "projectId": "H8CaAYZC",
+          "slug": "starlight"
+        },
+        "filename": {
+          "prefix": [
+            "starlight-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/starlight -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Starlight rewrites the light engine on both sides. Removing it from the server loses the entire benefit and can change lighting behaviour mid-world.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip."
+    },
+    {
+      "id": "mr.krypton",
+      "name": "Krypton",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric"
+      ],
+      "reason": "Server-side networking optimisation",
+      "match": {
+        "modrinth": {
+          "projectId": "fQEb0iXm",
+          "slug": "krypton"
+        },
+        "filename": {
+          "prefix": [
+            "krypton-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/krypton -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Optimises the network stack, which is predominantly a server concern.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip."
+    },
+    {
+      "id": "mr.ferrite-core",
+      "name": "FerriteCore",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Reduces server memory usage",
+      "match": {
+        "modrinth": {
+          "projectId": "uXXizFIs",
+          "slug": "ferrite-core"
+        },
+        "filename": {
+          "prefix": [
+            "ferritecore-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/ferrite-core -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"*\" (mod id ferritecore)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Deduplicates blockstate and model memory. On a large modpack server this is one of the highest-value mods to keep.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip. Frequently mislabelled as a client FPS mod."
+    },
+    {
+      "id": "mr.memoryleakfix",
+      "name": "Memory Leak Fix",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "quilt"
+      ],
+      "reason": "Patches leaks on both sides",
+      "match": {
+        "modrinth": {
+          "projectId": "NRjRiSSD",
+          "slug": "memoryleakfix"
+        },
+        "filename": {
+          "prefix": [
+            "memoryleakfix-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/memoryleakfix -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip."
+    },
+    {
+      "id": "mr.lazydfu",
+      "name": "LazyDFU",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "hvFnDODi",
+          "slug": "lazydfu"
+        },
+        "filename": {
+          "prefix": [
+            "lazydfu-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/lazydfu -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Defers DataFixerUpper initialisation, which shortens startup on servers too.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip. Deprecated on modern versions but still present in older packs."
+    },
+    {
+      "id": "mr.fastload",
+      "name": "Fastload",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "kCpssoSb",
+          "slug": "fastload"
+        },
+        "filename": {
+          "prefix": [
+            "fastload-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/fastload -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Alters world/chunk load behaviour at startup on both sides.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip."
+    },
+    {
+      "id": "mr.debugify",
+      "name": "Debugify",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "quilt"
+      ],
+      "reason": "Applies server-side bug fixes too",
+      "match": {
+        "modrinth": {
+          "projectId": "QwxR6Gcd",
+          "slug": "debugify"
+        },
+        "filename": {
+          "prefix": [
+            "debugify-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/debugify -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Fixes a configurable set of MC-xxxxx bugs, many of which are server-side behaviour fixes. Removing it from only one side can desync behaviour.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip."
+    },
+    {
+      "id": "mr.prism-lib",
+      "name": "Prism",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "1OE8wbN0",
+          "slug": "prism-lib"
+        },
+        "filename": {
+          "prefix": [
+            "prism-",
+            "prismlib-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/prism-lib -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Colour-handling library consumed by client mods (Iceberg, Legendary Tooltips). Safe to strip only when its dependents are also stripped — which is why this is 'high' rather than 'verified'.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library. Dual-sided content mods (Resourceful Lib family) declare it as a required dependency, and loader dependency resolution hard-fails on an unsatisfied depends entry regardless of side. server_side=unsupported is the library author describing their own mod, not evidence that removing it is safe for whatever is left behind. Surfaced, never auto-stripped, because nothing in this pipeline reads dependency graphs."
+    },
+    {
+      "id": "mr.searchables",
+      "name": "Searchables",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "fuuu3xnx",
+          "slug": "searchables"
+        },
+        "filename": {
+          "prefix": [
+            "searchables-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/searchables -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Search-widget library used by client-facing GUIs.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library. Same dependent caveat as Prism: dual-sided Create-family content mods declare it required. Surfaced, never auto-stripped, until a consumer actually parses depends/mods.toml from the surviving jars."
+    },
+    {
+      "id": "mr.yacl",
+      "name": "YetAnotherConfigLib (YACL)",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "1eAoo2KR",
+          "slug": "yacl"
+        },
+        "filename": {
+          "prefix": [
+            "yetanotherconfiglib-",
+            "yacl-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/yacl -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Primarily a client config-screen library, but declared optional on the server and depended on by dual-sided mods. Not worth the dependency risk to strip.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library. Small; leave it alone."
+    },
+    {
+      "id": "mr.konkrete",
+      "name": "Konkrete",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "J81TRJWm",
+          "slug": "konkrete"
+        },
+        "filename": {
+          "prefix": [
+            "konkrete_",
+            "konkrete-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/konkrete -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library used by FancyMenu and friends."
+    },
+    {
+      "id": "mr.iceberg",
+      "name": "Iceberg",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=required",
+      "match": {
+        "modrinth": {
+          "projectId": "5faXoLqX",
+          "slug": "iceberg"
+        },
+        "filename": {
+          "prefix": [
+            "iceberg-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/iceberg -> client_side=required, server_side=required",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library. Declared required on both sides — do not strip."
+    },
+    {
+      "id": "mr.placebo",
+      "name": "Placebo",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "tCkE8p2N",
+          "slug": "placebo"
+        },
+        "filename": {
+          "prefix": [
+            "placebo-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/placebo -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Apotheosis and other content mods hard-depend on it server-side.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library. Do not strip."
+    },
+    {
+      "id": "mr.patchouli",
+      "name": "Patchouli",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=required",
+      "match": {
+        "modrinth": {
+          "projectId": "nU0bVIaL",
+          "slug": "patchouli"
+        },
+        "filename": {
+          "prefix": [
+            "patchouli-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/patchouli -> client_side=required, server_side=required",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Looks like a book-rendering client mod, but content mods declare it as a hard dependency and the server validates it at load.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip. Removing it fails dependency resolution for its dependents."
+    },
+    {
+      "id": "mr.quark",
+      "name": "Quark",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=required",
+      "match": {
+        "modrinth": {
+          "projectId": "qnQsVE2z",
+          "slug": "quark"
+        },
+        "filename": {
+          "prefix": [
+            "quark-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/quark -> client_side=required, server_side=required",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Adds blocks and items. Stripping it desyncs the registry and corrupts placed content — the exact failure mode this list exists to prevent.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Do not strip under any circumstances."
+    },
+    {
+      "id": "mr.distanthorizons",
+      "name": "Distant Horizons",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Has a real server-side LOD component",
+      "match": {
+        "modrinth": {
+          "projectId": "uCdwusMi",
+          "slug": "distanthorizons"
+        },
+        "filename": {
+          "prefix": [
+            "distanthorizons-",
+            "distant-horizons-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/distanthorizons -> client_side=optional, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "jar-metadata",
+          "detail": "fabric.mod.json environment=\"*\" (mod id distanthorizons)",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Since 2.x, Distant Horizons can run server-side to generate and serve LODs to clients. Stripping it removes that capability silently.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "NEVER auto-strip. Was safely client-only in 1.x, which is why old lists get it wrong."
+    },
+    {
+      "id": "mr.replaymod",
+      "name": "ReplayMod",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "Nv2fQJo5",
+          "slug": "replaymod"
+        },
+        "filename": {
+          "prefix": [
+            "replaymod-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/replaymod -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Records the client's inbound packet stream to a local file.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Recording and rendering are entirely local."
+    },
+    {
+      "id": "mr.litematica",
+      "name": "Litematica",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "bEpr0Arc",
+          "slug": "litematica"
+        },
+        "filename": {
+          "prefix": [
+            "litematica-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/litematica -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Depends on MaLiLib, which is also client-only and listed separately. Some servers run a companion plugin (litematica-printer / easyplace helpers); those are separate artefacts.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Schematic overlay rendered locally."
+    },
+    {
+      "id": "mr.minihud",
+      "name": "MiniHUD",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "UMxybHE8",
+          "slug": "minihud"
+        },
+        "filename": {
+          "prefix": [
+            "minihud-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/minihud -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Depends on MaLiLib.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Information overlay drawn from client state."
+    },
+    {
+      "id": "mr.tweakeroo",
+      "name": "Tweakeroo",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "t5wuYk45",
+          "slug": "tweakeroo"
+        },
+        "filename": {
+          "prefix": [
+            "tweakeroo-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/tweakeroo -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Depends on MaLiLib.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Client-side tweaks; all actions are expressed as vanilla packets."
+    },
+    {
+      "id": "mr.malilib",
+      "name": "MaLiLib",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "GcWjdA9I",
+          "slug": "malilib"
+        },
+        "filename": {
+          "prefix": [
+            "malilib-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/malilib -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: malilib-fabric-26.2-0.29.3.jar",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Support library for the masa mod family (Litematica, MiniHUD, Tweakeroo), all of which are themselves client-only.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library. Safe to remove ONLY if every masa-family dependent is also removed; itemscroller and others are not in this list. Leave one behind and Fabric refuses to launch. Surfaced, never auto-stripped."
+    },
+    {
+      "id": "mr.libipn",
+      "name": "libIPN",
+      "sideness": "client-optional",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge",
+        "quilt"
+      ],
+      "reason": "Modrinth server_side=unsupported",
+      "match": {
+        "modrinth": {
+          "projectId": "onSQdWhM",
+          "slug": "libipn"
+        },
+        "filename": {
+          "prefix": [
+            "libipn-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/libipn -> client_side=required, server_side=unsupported",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: libIPN-neoforge-26.1.2-6.8.2.jar",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library for Inventory Profiles Next. Safe only alongside IPN itself. Nothing here evaluates that precondition, so it is surfaced rather than auto-stripped."
+    },
+    {
+      "id": "mr.creativecore",
+      "name": "CreativeCore",
+      "sideness": "client-optional",
+      "confidence": "verified",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Modrinth server_side=optional",
+      "match": {
+        "modrinth": {
+          "projectId": "OsZiaDHq",
+          "slug": "creativecore"
+        },
+        "filename": {
+          "prefix": [
+            "creativecore_",
+            "creativecore-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "modrinth-api",
+          "detail": "GET /v2/project/creativecore -> client_side=required, server_side=optional",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "modrinth-files",
+          "detail": "primary files: CreativeCore_FABRIC_v2.12.39_mc1.20.1.jar — note underscores",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Dependency of AmbientSounds and of dual-sided mods such as Little Tiles. Stripping it with AmbientSounds would break those.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Library. Do not strip even when AmbientSounds is stripped."
+    },
+    {
+      "id": "cf.controllable",
+      "name": "Controllable",
+      "sideness": "client-only",
+      "confidence": "high",
+      "loaders": [
+        "forge",
+        "neoforge"
+      ],
+      "reason": "Controller input handling, client-side only",
+      "match": {
+        "curseforge": {
+          "slug": "controllable"
+        },
+        "filename": {
+          "prefix": [
+            "controllable-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "reasoning",
+          "detail": "Not published on Modrinth, so there is no server_side declaration to cite. The mod binds gamepad input to the client input handler.",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "No CurseForge numeric project id is recorded: inventing one would create a high-precedence matcher that could hit an unrelated project.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "CurseForge-only. Slug and filename matching only, by design."
+    },
+    {
+      "id": "cf.smooth-scrolling-everywhere",
+      "name": "Smooth Scrolling Everywhere",
+      "sideness": "client-only",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "GUI scroll interpolation",
+      "match": {
+        "curseforge": {
+          "slug": "smooth-scrolling-everywhere"
+        },
+        "filename": {
+          "prefix": [
+            "smoothscrollingeverywhere-",
+            "smooth-scrolling-everywhere-"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "reasoning",
+          "detail": "CurseForge-primary. Purely a GUI rendering tweak; no registry or network use.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "CurseForge-only. Slug and filename matching only."
+    },
+    {
+      "id": "cf.inventory-hud-plus",
+      "name": "Inventory HUD+",
+      "sideness": "client-only",
+      "confidence": "high",
+      "loaders": [
+        "fabric",
+        "forge",
+        "neoforge"
+      ],
+      "reason": "HUD overlay rendered from the client's own inventory state",
+      "match": {
+        "modrinth": {
+          "slug": "inventory-hud+-by-soulspeed"
+        },
+        "curseforge": {
+          "slug": "inventory-hud-forge"
+        },
+        "filename": {
+          "prefix": [
+            "inventoryhud.",
+            "inventoryhud-",
+            "inventory-hud"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "source": "reasoning",
+          "detail": "Modrinth mirror 'inventory-hud+-by-soulspeed' (LLzI0kbc) declares client_side=required, server_side=unsupported.",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Project id intentionally omitted: the Modrinth mirror and the CurseForge original are different publications of the same mod and the ids are not interchangeable. Slug matching is the honest option here.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Filename prefix 'inventoryhud.' is intentional — releases are named InventoryHUD.forge.1.20.1.jar with dots, not hyphens."
+    },
+    {
+      "id": "cf.optifine",
+      "name": "OptiFine",
+      "sideness": "client-only",
+      "confidence": "verified",
+      "loaders": [
+        "forge"
+      ],
+      "reason": "Client-only renderer; never valid in a server mods folder",
+      "match": {
+        "filename": {
+          "prefix": [
+            "optifine",
+            "preview_optifine"
+          ],
+          "regex": "^(preview_)?optifine[_-].*\\.jar$"
+        }
+      },
+      "evidence": [
+        {
+          "source": "reasoning",
+          "detail": "OptiFine is distributed only from optifine.net and has no server build. A dedicated server that loads it crashes or ignores it.",
+          "checkedAt": "2026-07-18"
+        },
+        {
+          "source": "reasoning",
+          "detail": "Matched by filename only because OptiFine has no Modrinth or CurseForge project. The regex is anchored and requires a separator to avoid matching unrelated names.",
+          "checkedAt": "2026-07-18"
+        }
+      ],
+      "notes": "Filename-only rule. Matching is case-insensitive, so OptiFine_1.20.1_HD_U_I6.jar is covered."
+    }
+  ],
+  "overrides": {}
+}

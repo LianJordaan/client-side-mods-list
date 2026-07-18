@@ -1,0 +1,36 @@
+name: Validate list
+
+# This list drives unattended file removal on live Minecraft servers. The Cloudflare Worker
+# refuses to publish a file that fails validation, but by then the bad commit is already on main
+# and the served list is silently frozen at the last good version. Catch it here instead.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/client-only.json'
+      - 'scripts/validate.js'
+      - '.github/workflows/validate.yml'
+  pull_request:
+    paths:
+      - 'data/client-only.json'
+      - 'scripts/validate.js'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate data/client-only.json
+        run: node scripts/validate.js
+
+      - name: Check the file is strict JSON
+        # The consumers use strict parsers. A trailing comma or a comment parses fine in some
+        # editors and then fails everywhere that matters.
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('data/client-only.json','utf8')); console.log('strict JSON: ok')"
