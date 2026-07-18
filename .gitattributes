@@ -1,0 +1,8 @@
+# The Worker serves data/client-only.json byte-for-byte from raw.githubusercontent.com and
+# derives its ETag from a hash of the content. Committing CRLF from a Windows editor would
+# change every byte of the file and churn the ETag for no reason, so pin LF.
+* text=auto eol=lf
+*.json text eol=lf
+*.js   text eol=lf
+*.yml  text eol=lf
+*.md   text eol=lf
