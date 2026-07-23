@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "listVersion": "2026.07.22",
+ "listVersion": "2026.07.23",
  "updatedAt": "2026-07-19T00:00:00Z",
  "source": {
   "repository": "https://github.com/LianJordaan/client-side-mods-list",
@@ -3843,8 +3843,1118 @@
     }
    ],
    "notes": "Patches Flywheel for Iris shader support; its init path touches client-only classes and hard-crashes dedicated servers."
+  },
+  {
+   "id": "mr.neat",
+   "name": "Neat",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "Ins7SzzR",
+     "slug": "neat"
+    },
+    "filename": {
+     "prefix": [
+      "neat-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/neat -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: Neat-1.21-47-NEOFORGE.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.just-zoom",
+   "name": "Just Zoom",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "iAiqcykM",
+     "slug": "just-zoom"
+    },
+    "filename": {
+     "prefix": [
+      "justzoom_"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/just-zoom -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: justzoom_neoforge_2.1.0_MC_1.21.1.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.srdp",
+   "name": "Simple Rich Discord Presence",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "SCAopByd",
+     "slug": "srdp"
+    },
+    "filename": {
+     "prefix": [
+      "simplediscordrichpresence-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/srdp -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: SimpleDiscordRichPresence-neoforge-88.0.1-build.54+mc1.21.1.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.advancement-plaques",
+   "name": "Advancement Plaques",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "9NM0dXub",
+     "slug": "advancement-plaques"
+    },
+    "filename": {
+     "prefix": [
+      "advancementplaques-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/advancement-plaques -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: AdvancementPlaques-1.21.1-neoforge-1.6.8.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.oracle-index",
+   "name": "Oracle Index",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "J8MMsNrL",
+     "slug": "oracle-index"
+    },
+    "filename": {
+     "prefix": [
+      "oracle_index-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/oracle-index -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: oracle_index-neoforge-1.3.0.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.athena-ctm",
+   "name": "Athena",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "b1ZV3DIJ",
+     "slug": "athena-ctm"
+    },
+    "filename": {
+     "prefix": [
+      "athena-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/athena-ctm -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: athena-neoforge-1.21-4.0.2.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.crash-assistant",
+   "name": "Crash Assistant",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "ix1qq8Ux",
+     "slug": "crash-assistant"
+    },
+    "filename": {
+     "prefix": [
+      "crashassistant-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/crash-assistant -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: CrashAssistant-neoforge-1.20.6-1.21.4-1.11.10.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.particular-reforged",
+   "name": "Particular ✨ Reforged",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "pYFUU6cq",
+     "slug": "particular-reforged"
+    },
+    "filename": {
+     "prefix": [
+      "particular-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/particular-reforged -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: particular-1.21.1-NeoForge-1.5.5.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.tooltip-overhaul",
+   "name": "Tooltip Overhaul",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "vRFcG5n6",
+     "slug": "tooltip-overhaul"
+    },
+    "filename": {
+     "prefix": [
+      "tooltipoverhaul-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/tooltip-overhaul -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: tooltipoverhaul-neoforge-1.21.1-1.4.4.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.ambient-environment",
+   "name": "Ambient Environment",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "DyTvM1dv",
+     "slug": "ambient-environment"
+    },
+    "filename": {
+     "prefix": [
+      "ambientenvironment-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/ambient-environment -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: AmbientEnvironment-neoforge-1.21.1-18.0.0.2.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.jump-over-fences",
+   "name": "Jump Over Fences",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "4HeIHvIP",
+     "slug": "jump-over-fences"
+    },
+    "filename": {
+     "prefix": [
+      "jumpoverfences-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/jump-over-fences -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: jumpoverfences-neoforge-1.21.1-1.6.1.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.durability-tooltip",
+   "name": "Durability Tooltip",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "smUP7V3r",
+     "slug": "durability-tooltip"
+    },
+    "filename": {
+     "prefix": [
+      "durabilitytooltip-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/durability-tooltip -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: durabilitytooltip-1.1.6-neoforge-mc1.21.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.fusion-connected-textures",
+   "name": "Fusion (Connected Textures)",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "p19vrgc2",
+     "slug": "fusion-connected-textures"
+    },
+    "filename": {
+     "prefix": [
+      "fusion-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/fusion-connected-textures -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: fusion-1.3.3-neoforge-mc1.21.1.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.justenoughbreeding",
+   "name": "Just Enough Breeding (JEBr)",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "9Pk89J3g",
+     "slug": "justenoughbreeding"
+    },
+    "filename": {
+     "prefix": [
+      "justenoughbreeding-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/justenoughbreeding -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: justenoughbreeding-neoforge-1.21.1-3.1.0.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.travelers-titles",
+   "name": "Traveler's Titles",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "JtifUr64",
+     "slug": "travelers-titles"
+    },
+    "filename": {
+     "prefix": [
+      "travelerstitles-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/travelers-titles -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: TravelersTitles-1.21.1-NeoForge-5.1.3.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.explosive-enhancement-forge",
+   "name": "Explosive Enhancement: Reforged",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "r0camchr",
+     "slug": "explosive-enhancement-forge"
+    },
+    "filename": {
+     "prefix": [
+      "explosiveenhancement-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/explosive-enhancement-forge -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: explosiveenhancement-neoforge-1.21.1-1.1.2.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.more-overlays-updated",
+   "name": "More Overlays Updated",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "Thy5Pqut",
+     "slug": "more-overlays-updated"
+    },
+    "filename": {
+     "prefix": [
+      "moreoverlays-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/more-overlays-updated -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: moreoverlays-1.24.2-mc1.21.1-neoforge.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.colorful-hearts",
+   "name": "Colorful Hearts",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "wQfMUdZT",
+     "slug": "colorful-hearts"
+    },
+    "filename": {
+     "prefix": [
+      "colorfulhearts-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/colorful-hearts -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: colorfulhearts-neoforge-1.21.1-10.5.9.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.euphoria-patches",
+   "name": "Euphoria Patches",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "4H6sumDB",
+     "slug": "euphoria-patches"
+    },
+    "filename": {
+     "prefix": [
+      "euphoriapatcher-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/euphoria-patches -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: EuphoriaPatcher-1.9.3-r5.8.1-neoforge.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.yeetus-experimentus",
+   "name": "Yeetus Experimentus",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "HaaH232J",
+     "slug": "yeetus-experimentus"
+    },
+    "filename": {
+     "prefix": [
+      "yeetusexperimentus-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/yeetus-experimentus -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: yeetusexperimentus-neoforge-87.0.0.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.jade-sable-compat",
+   "name": "Jade Sable Compat",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "jCrJ4iGH",
+     "slug": "jade-sable-compat"
+    },
+    "filename": {
+     "prefix": [
+      "sablejade-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/jade-sable-compat -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: sablejade-1.2.1.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.draconic-evolution-render-patcher",
+   "name": "Draconic Evolution Render Patcher",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "BNhriTkm",
+     "slug": "draconic-evolution-render-patcher"
+    },
+    "filename": {
+     "prefix": [
+      "derenderpatcher-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/draconic-evolution-render-patcher -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: derenderpatcher-2.0.0.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.nolijium",
+   "name": "Nolijium",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "KstN3eSL",
+     "slug": "nolijium"
+    },
+    "filename": {
+     "prefix": [
+      "nolijium-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/nolijium -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: nolijium-0.5.6.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.bridging-mod",
+   "name": "Bridging Mod",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "lO3s8hjs",
+     "slug": "bridging-mod"
+    },
+    "filename": {
+     "prefix": [
+      "bridgingmod-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/bridging-mod -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: BridgingMod-2.6.2+1.21.1.neoforge-release.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.bisect-mod",
+   "name": "BisectHosting Server Integration Menu",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "yWSAtnfH",
+     "slug": "bisect-mod"
+    },
+    "filename": {
+     "prefix": [
+      "bhmenu-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/bisect-mod -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: BHMenu-NeoForge-1.21-2.4.4.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.create-aeronautics-sable-mass-view",
+   "name": "Sable: Mass view (Create Aeronautics)",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "f5uobnkD",
+     "slug": "create-aeronautics-(sable)-mass-view"
+    },
+    "filename": {
+     "prefix": [
+      "sablemassview-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/create-aeronautics-(sable)-mass-view -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: sablemassview-1.0.0.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.just-enough-resources-jer",
+   "name": "Just Enough Resources (JER)",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "uEfK2CXF",
+     "slug": "just-enough-resources-jer"
+    },
+    "filename": {
+     "prefix": [
+      "justenoughresources-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/just-enough-resources-jer -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.flickerfix",
+   "name": "FlickerFix",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "KSyWOxT5",
+     "slug": "flickerfix"
+    },
+    "filename": {
+     "prefix": [
+      "flickerfix-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/flickerfix -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: flickerfix-1.21.1-6.1.0.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.neoauth",
+   "name": "NeoAuth",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "zeZhoBhv",
+     "slug": "neoauth"
+    },
+    "filename": {
+     "prefix": [
+      "neoauth-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/neoauth -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: NeoAuth-1.21.1-1.0.1.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "mr.cleanview",
+   "name": "CleanView",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "Modrinth server_side=unsupported",
+   "match": {
+    "modrinth": {
+     "projectId": "mynxVooj",
+     "slug": "cleanview"
+    },
+    "filename": {
+     "prefix": [
+      "cleanview-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "modrinth-api",
+     "detail": "GET /v2/project/cleanview -> server_side=unsupported",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution 1.21.1 NeoForge server install: cleanview-1.21.1-v1-neoforge.jar",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
   }
  ],
  "overrides": {},
- "generatedAt": "2026-07-22T18:40:00Z"
+ "generatedAt": "2026-07-23T19:40:00Z"
 }
