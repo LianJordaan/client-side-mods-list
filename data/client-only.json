@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "listVersion": "2026.07.23",
+ "listVersion": "2026.07.23.1",
  "updatedAt": "2026-07-19T00:00:00Z",
  "source": {
   "repository": "https://github.com/LianJordaan/client-side-mods-list",
@@ -4953,8 +4953,46 @@
     }
    ],
    "notes": "Auto-added from FTB Evolution NeoForge server install; verified client-only on Modrinth."
+  },
+  {
+   "id": "cf.collapsible-groups",
+   "name": "Collapsible Groups (JEI)",
+   "sideness": "client-only",
+   "confidence": "verified",
+   "loaders": [
+    "fabric",
+    "neoforge",
+    "forge",
+    "quilt"
+   ],
+   "reason": "JEI UI addon; loads client GUI classes and hard-crashes dedicated servers",
+   "match": {
+    "curseforge": {
+     "projectId": 1495382,
+     "slug": "collapsible-groups"
+    },
+    "filename": {
+     "prefix": [
+      "collapsible_groups-",
+      "collapsiblegroups-"
+     ]
+    }
+   },
+   "evidence": [
+    {
+     "source": "curseforge",
+     "detail": "mod 1495382 'Collapsible Groups (JEI)' — a JEI interface addon; CurseForge-only, not published on Modrinth",
+     "checkedAt": "2026-07-23"
+    },
+    {
+     "source": "field-report",
+     "detail": "FTB Evolution NeoForge 21.1.233: 'Attempted to load class net/minecraft/client/gui/screens/Screen for invalid dist DEDICATED_SERVER'",
+     "checkedAt": "2026-07-23"
+    }
+   ],
+   "notes": "JEI addon for collapsing ingredient groups; client-only, crashes NeoForge dedicated servers at mod construction."
   }
  ],
  "overrides": {},
- "generatedAt": "2026-07-23T19:40:00Z"
+ "generatedAt": "2026-07-23T19:50:00Z"
 }
